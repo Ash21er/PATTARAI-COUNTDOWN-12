@@ -201,7 +201,12 @@ string getWinner(string gameBoard[ROWS][COLS])
 	{
 		return gameBoard[2][0]; //we have a diagonal match!
 	}
-
+        //lower-left to upper right diagonal
+	if (gameBoard[2][0] != " " && gameBoard[2][0] == gameBoard[1][1] && gameBoard[1][1] == gameBoard[0][2])
+	{
+		return gameBoard[2][0]; //we have diagonal match!
+	}
+	
 	//if we get to here...
 	return ""; //no winner yet !
 }//end getwinner
